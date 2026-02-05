@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #e2e8f0;
+  background-color: #020617;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 85% -15%, rgba(6, 182, 212, 0.25), transparent 30%),
+    radial-gradient(circle at 10% 30%, rgba(59, 130, 246, 0.12), transparent 20%),
+    #020617;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  .container-wide {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-tight text-white sm:text-4xl;
+  }
+
+  .section-subtitle {
+    @apply mt-4 max-w-3xl text-base text-slate-300 sm:text-lg;
+  }
+
+  .card {
+    @apply rounded-2xl border border-slate-800/90 bg-slate-900/70 p-6 backdrop-blur;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-brand-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-600;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl border border-slate-700 px-5 py-3 text-sm font-semibold text-white transition hover:border-brand-500 hover:text-brand-50;
+  }
+}
